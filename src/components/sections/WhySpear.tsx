@@ -2,14 +2,14 @@ import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import { VALUES } from "@/lib/content";
 
-/** "Why Spear" — four value cards with big Bebas initials. */
+/** "Why Spear" — five value cards whose initials spell SPEAR. */
 export default function WhySpear() {
   return (
     <Section tone="forest">
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
           <p className="eyebrow justify-center text-leaf [&::before]:hidden">
-            — Why Spear
+            Why Spear
           </p>
           <h2 className="mt-3 font-display text-[clamp(40px,6vw,72px)] leading-[1.0] text-white">
             Honest Work You Can Count On
@@ -17,7 +17,7 @@ export default function WhySpear() {
         </Reveal>
       </div>
 
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
         {VALUES.map((value, i) => (
           <Reveal key={value.title} delay={i * 100}>
             <article className="h-full rounded-card border border-white/10 bg-white/[0.04] p-7 transition-colors duration-200 hover:bg-white/[0.08]">

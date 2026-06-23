@@ -183,26 +183,32 @@ export interface ValueCard {
   readonly desc: string;
 }
 
+// Initials spell SPEAR — keep this order.
 export const VALUES: readonly ValueCard[] = [
   {
-    initial: "R",
-    title: "Reliable & Trustworthy",
-    desc: "We show up on time and do what we say.",
+    initial: "S",
+    title: "Straightforward",
+    desc: "Honest, fair pricing with no surprises.",
   },
   {
     initial: "P",
-    title: "Professional & Experienced",
+    title: "Professional",
     desc: "Quality results and attention to detail on every property.",
   },
   {
-    initial: "H",
-    title: "Honest, Fair Pricing",
-    desc: "Straightforward pricing with no surprises.",
+    initial: "E",
+    title: "Experienced",
+    desc: "Skilled and thorough, season after season.",
   },
   {
-    initial: "L",
-    title: "Locally Owned",
-    desc: "A neighbor invested in keeping your community looking great.",
+    initial: "A",
+    title: "Attentive",
+    desc: "We treat your property like it's our own.",
+  },
+  {
+    initial: "R",
+    title: "Reliable",
+    desc: "We show up on time and do what we say.",
   },
 ] as const;
 
