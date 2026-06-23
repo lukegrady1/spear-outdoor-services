@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+/*
+  Spear Outdoor Services — design tokens.
+  DESIGN.md was written for Tailwind v3 (tailwind.config.ts). The project ships
+  Tailwind v4, so the identical token system is declared here via @theme.
+  This generates the same utilities the spec calls for:
+    bg-forest-900 / text-leaf / rounded-pill / max-w-site / animate-marquee /
+    font-display / font-body, etc.
+*/
+@theme {
+  /* Brand palette ------------------------------------------------------ */
+  --color-forest-900: #25352c; /* PRIMARY dark — dark sections, headlines, body text */
+  --color-forest-950: #1a2620; /* deeper forest — footer / deepest bands */
+  --color-leaf: #7b9e36; /* PRIMARY accent — eyebrows, key words, CTAs, handle */
+  --color-leaf2: #6a8a2d; /* darker olive — button hover / pressed */
+  --color-sage: #496e59; /* secondary green — icons, tints */
+  --color-mist: #edf0ec; /* light alternating-section background */
+  --color-muted: #5b665f; /* muted copy / borders */
+
+  /* Typography --------------------------------------------------------- */
+  --font-display: var(--font-bebas), "Bebas Neue", sans-serif;
+  --font-body: var(--font-poppins), system-ui, sans-serif;
+
+  /* Radii + layout ----------------------------------------------------- */
+  --radius-pill: 100px;
+  --radius-card: 16px;
+  --container-site: 1200px;
+
+  /* Motion ------------------------------------------------------------- */
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* Base layer ----------------------------------------------------------- */
+@layer base {
+  body {
+    @apply bg-white font-body text-forest-900 antialiased;
+  }
+
+  /* Visible, on-brand focus ring for keyboard users everywhere. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-leaf ring-offset-2 ring-offset-white;
+  }
+
+  /* Tame the condensed display face — it reads better with a touch of tracking. */
+  .font-display {
+    letter-spacing: 0.01em;
+  }
+}
+
+/* Reusable patterns ---------------------------------------------------- */
+@layer components {
+  /* Uppercase leaf-green kicker used above most section headlines. */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-body text-[14px] font-semibold uppercase tracking-[0.12em] text-leaf;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply inline-block h-px w-6 bg-leaf;
+  }
+
+  /* Link underline-wipe used in nav + footer. */
+  .link-wipe {
+    @apply relative transition-colors;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.25s ease;
+  }
+  .link-wipe:hover {
+    background-size: 100% 2px;
+  }
+}
+
+/* Scroll-reveal initial/animated states (driven by Reveal.tsx). */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-marquee {
+    animation: none !important;
+  }
+  * {
+    scroll-behavior: auto !important;
+  }
+}

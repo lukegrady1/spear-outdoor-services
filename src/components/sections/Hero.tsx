@@ -1,0 +1,64 @@
+import Image from "next/image";
+import Button from "@/components/Button";
+import { ArrowIcon } from "@/components/icons";
+import { COMPANY, PRIMARY_CTA, SECONDARY_CTA } from "@/lib/content";
+
+/**
+ * Hero — full-bleed forest band over a darkened lawn photo. Condensed H1 with
+ * a single leaf-green accent word, subhead, and the two primary CTAs.
+ */
+export default function Hero() {
+  return (
+    <section
+      id="top"
+      className="relative isolate flex min-h-[88vh] items-center overflow-hidden bg-forest-950 text-white"
+    >
+      {/* Background photo + forest overlays so white text always pops */}
+      <Image
+        src="/images/hero-lawn.svg"
+        alt="Freshly mowed, healthy green lawn at golden hour"
+        fill
+        priority
+        sizes="100vw"
+        className="-z-10 object-cover"
+      />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-forest-950/85 via-forest-950/65 to-forest-950/90" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(120%_80%_at_15%_10%,rgba(123,158,54,0.18),transparent_55%)]" />
+
+      <div className="mx-auto w-full max-w-site px-6 py-32 md:py-40">
+        <div className="max-w-3xl">
+          <p className="eyebrow text-leaf [&::before]:bg-leaf">
+            Lawn Care &amp; Landscaping · {COMPANY.location}
+          </p>
+
+          <h1 className="mt-5 font-display text-[clamp(48px,7.5vw,76px)] leading-[1.02] tracking-[0.01em] text-white">
+            Reliable Lawn Care, <span className="text-leaf">Done Right</span>
+          </h1>
+
+          <p className="mt-6 max-w-xl text-[clamp(16px,2vw,19px)] leading-relaxed text-white/85">
+            Lawn care &amp; landscaping for homeowners in {COMPANY.location}
+            {" "}&amp; surrounding areas. Weekly mowing, fresh mulch, and seasonal
+            cleanups — honest work, fair pricing.
+          </p>
+
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Button href={COMPANY.bookingUrl} variant="accent" size="lg">
+              {PRIMARY_CTA}
+              <ArrowIcon className="h-5 w-5" />
+            </Button>
+            <Button href={COMPANY.introCallUrl} variant="ghost-light" size="lg">
+              {SECONDARY_CTA}
+            </Button>
+          </div>
+
+          <p className="mt-6 text-[14px] font-medium uppercase tracking-[0.12em] text-white/60">
+            Free Estimates · Locally Owned &amp; Operated
+          </p>
+        </div>
+      </div>
+
+      {/* subtle bottom fade into the next section */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white/5" />
+    </section>
+  );
+}
