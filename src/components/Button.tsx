@@ -13,24 +13,21 @@ export interface ButtonProps {
 
 const base =
   "inline-flex items-center justify-center gap-2 font-display font-bold tracking-[0.02em] " +
-  "rounded-pill transition-[transform,background-color,box-shadow] duration-150 " +
-  "hover:-translate-y-0.5 motion-reduce:hover:translate-y-0 " +
+  "rounded-pill transition-colors duration-150 " +
   "focus-visible:ring-2 focus-visible:ring-leaf focus-visible:ring-offset-2";
 
 const sizes: Record<NonNullable<ButtonProps["size"]>, string> = {
-  md: "text-[18px] px-5 py-3",
-  lg: "text-[20px] px-7 py-4",
+  md: "text-[18px] px-6 py-3",
+  lg: "text-[20px] px-8 py-4",
 };
 
 const variants: Record<ButtonVariant, string> = {
-  primary:
-    "bg-forest-900 text-white hover:bg-forest-950 shadow-[0_8px_22px_rgba(37,53,44,0.25)]",
-  accent:
-    "bg-leaf text-white hover:bg-leaf2 shadow-[0_8px_22px_rgba(123,158,54,0.35)]",
+  primary: "bg-forest-900 text-white hover:bg-forest-950",
+  accent: "bg-leaf text-white hover:bg-leaf2",
   ghost:
-    "bg-transparent text-forest-900 ring-2 ring-inset ring-forest-900 hover:bg-forest-900 hover:text-white",
+    "bg-transparent text-forest-900 ring-1 ring-inset ring-forest-900/30 hover:ring-forest-900 hover:bg-forest-900 hover:text-white",
   "ghost-light":
-    "bg-transparent text-white ring-2 ring-inset ring-white/70 hover:bg-white hover:text-forest-900",
+    "bg-transparent text-white ring-1 ring-inset ring-white/40 hover:ring-white/80",
 };
 
 /**

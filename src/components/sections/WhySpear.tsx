@@ -12,7 +12,7 @@ export default function WhySpear() {
             — Why Spear
           </p>
           <h2 className="mt-3 font-display text-[clamp(40px,6vw,72px)] leading-[1.0] text-white">
-            Honest Work You Can <span className="text-leaf">Count On</span>
+            Honest Work You Can Count On
           </h2>
         </Reveal>
       </div>

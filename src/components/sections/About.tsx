@@ -13,7 +13,7 @@ export default function About() {
         {/* Photo */}
         <Reveal className="order-2 lg:order-1">
           <div className="relative">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-card shadow-[0_18px_50px_rgba(37,53,44,0.20)]">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-card border border-forest-900/10">
               <Image
                 src="/images/about-crew.svg"
                 alt="A freshly finished Spear Outdoor Services property"
@@ -23,7 +23,7 @@ export default function About() {
               />
             </div>
             {/* Locally owned badge */}
-            <div className="absolute -bottom-5 -right-3 flex items-center gap-2 rounded-pill bg-leaf px-5 py-3 font-display text-[20px] text-white shadow-[0_10px_30px_rgba(123,158,54,0.4)] sm:-right-5">
+            <div className="absolute -bottom-5 -right-3 flex items-center gap-2 rounded-pill bg-leaf px-5 py-3 font-display text-[20px] text-white sm:-right-5">
               <PinIcon className="h-5 w-5" />
               Locally Owned · {COMPANY.location}
             </div>
@@ -32,9 +32,9 @@ export default function About() {
 
         {/* Copy */}
         <Reveal delay={120} className="order-1 lg:order-2">
-          <p className="eyebrow">— About us</p>
+          <p className="eyebrow">About us</p>
           <h2 className="mt-3 font-display text-[clamp(40px,6vw,72px)] leading-[1.0] text-forest-900">
-            Locally Owned, <span className="text-leaf">Reliable</span>
+            Locally Owned, Reliable
           </h2>
           <div className="mt-5 space-y-4 text-[16px] leading-relaxed text-muted">
             <p>

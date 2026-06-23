@@ -9,9 +9,9 @@ export default function ServicesGrid() {
     <Section id="services" tone="white">
       <div className="grid items-end gap-8 md:grid-cols-[1fr_auto]">
         <Reveal>
-          <p className="eyebrow">— What we do</p>
+          <p className="eyebrow">What we do</p>
           <h2 className="mt-4 max-w-2xl font-display text-[clamp(40px,6vw,72px)] leading-[1.0] text-forest-900">
-            Everything Your Lawn Needs — <span className="text-leaf">Handled</span>
+            Everything Your Lawn Needs — Handled
           </h2>
         </Reveal>
         <Reveal delay={120}>

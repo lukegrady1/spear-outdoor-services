@@ -14,7 +14,7 @@ export default function GalleryPage() {
   return (
     <>
       <PageHero
-        eyebrow="— Our latest work"
+        eyebrow="Our latest work"
         crumb="Gallery"
         title={
           <>
@@ -26,7 +26,7 @@ export default function GalleryPage() {
       <Gallery />
       <Results />
       <CtaBand
-        eyebrow="— Like what you see?"
+        eyebrow="Like what you see?"
         title={
           <>
             Let&apos;s Do the Same for <span className="text-leaf">Your Yard</span>

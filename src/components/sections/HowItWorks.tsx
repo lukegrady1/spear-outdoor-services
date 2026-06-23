@@ -8,9 +8,9 @@ export default function HowItWorks() {
     <Section tone="white">
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
-          <p className="eyebrow justify-center [&::before]:hidden">— Simple process</p>
+          <p className="eyebrow justify-center [&::before]:hidden">Simple process</p>
           <h2 className="mt-3 font-display text-[clamp(40px,6vw,72px)] leading-[1.0] text-forest-900">
-            How It <span className="text-leaf">Works</span>
+            How It Works
           </h2>
         </Reveal>
       </div>

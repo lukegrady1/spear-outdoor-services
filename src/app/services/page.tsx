@@ -15,7 +15,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
-        eyebrow="— What we offer"
+        eyebrow="What we offer"
         crumb="Services"
         title={
           <>
@@ -28,7 +28,7 @@ export default function ServicesPage() {
       <HowItWorks />
       <Results />
       <CtaBand
-        eyebrow="— Ready for a greener lawn?"
+        eyebrow="Ready for a greener lawn?"
         title={
           <>
             Get Your <span className="text-leaf">Free Estimate</span>

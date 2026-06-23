@@ -16,7 +16,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="— Who we are"
+        eyebrow="Who we are"
         crumb="About"
         title={
           <>
@@ -30,7 +30,7 @@ export default function AboutPage() {
       <HowItWorks />
       <ServiceArea />
       <CtaBand
-        eyebrow="— Ready to get started?"
+        eyebrow="Ready to get started?"
         title={
           <>
             Let&apos;s Make Your Lawn <span className="text-leaf">Look Great</span>

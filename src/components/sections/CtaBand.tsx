@@ -1,6 +1,6 @@
 import Button from "@/components/Button";
 import Reveal from "@/components/Reveal";
-import { ArrowIcon, PhoneIcon } from "@/components/icons";
+import { PhoneIcon } from "@/components/icons";
 import { COMPANY, PRIMARY_CTA } from "@/lib/content";
 
 export interface CtaBandProps {
@@ -20,9 +20,8 @@ export default function CtaBand({
   showPhone = false,
 }: CtaBandProps) {
   return (
-    <section className="relative overflow-hidden bg-forest-900 py-[clamp(56px,8vw,96px)] text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(90%_120%_at_85%_15%,rgba(123,158,54,0.20),transparent_55%)]" />
-      <Reveal className="relative mx-auto flex max-w-site flex-col items-start gap-8 px-6 lg:flex-row lg:items-center lg:justify-between">
+    <section className="border-y border-white/10 bg-forest-900 py-[clamp(56px,8vw,96px)] text-white">
+      <Reveal className="mx-auto flex max-w-site flex-col items-start gap-8 px-6 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-2xl">
           {eyebrow && (
             <p className="eyebrow text-leaf [&::before]:bg-leaf">{eyebrow}</p>
@@ -36,7 +35,6 @@ export default function CtaBand({
         <div className="flex shrink-0 flex-col items-start gap-3">
           <Button href={COMPANY.bookingUrl} variant="accent" size="lg">
             {PRIMARY_CTA}
-            <ArrowIcon className="h-5 w-5" />
           </Button>
           {showPhone && (
             <a

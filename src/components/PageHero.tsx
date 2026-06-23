@@ -15,11 +15,7 @@ export interface PageHeroProps {
  */
 export default function PageHero({ eyebrow, title, subtitle, crumb }: PageHeroProps) {
   return (
-    <section className="relative isolate overflow-hidden bg-forest-950 text-white">
-      {/* atmospheric leaf-green glow + bottom fade */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(110%_90%_at_85%_0%,rgba(123,158,54,0.20),transparent_55%)]" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-forest-900/40 to-forest-950" />
-
+    <section className="bg-forest-950 text-white">
       <div className="mx-auto max-w-site px-6 pb-[clamp(48px,8vw,80px)] pt-[clamp(140px,20vh,220px)]">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-5">

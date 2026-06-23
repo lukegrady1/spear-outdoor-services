@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { IconName } from "@/lib/content";
-import { ServiceIcon, ArrowIcon } from "@/components/icons";
+import { ServiceIcon } from "@/components/icons";
 
 export interface ServiceCardProps {
   title: string;
@@ -28,7 +28,7 @@ export default function ServiceCard({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col overflow-hidden rounded-card bg-white shadow-[0_6px_24px_rgba(37,53,44,0.10)] transition-all duration-200 hover:-translate-y-1.5 hover:shadow-[0_14px_40px_rgba(37,53,44,0.20)] focus-visible:-translate-y-1.5"
+      className="group flex flex-col overflow-hidden rounded-card border border-forest-900/10 bg-white transition-colors duration-200 hover:border-forest-900/25"
     >
       <div className="relative aspect-[3/2] w-full overflow-hidden">
         <Image
@@ -54,9 +54,8 @@ export default function ServiceCard({
           <p className="pt-2 text-[15px] leading-relaxed text-muted">{blurb}</p>
         </div>
 
-        <span className="mt-4 inline-flex items-center gap-1.5 font-body text-[13px] font-semibold uppercase tracking-[0.12em] text-leaf">
+        <span className="mt-4 font-body text-[13px] font-semibold uppercase tracking-[0.12em] text-leaf">
           Learn more
-          <ArrowIcon className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
         </span>
       </div>
     </a>

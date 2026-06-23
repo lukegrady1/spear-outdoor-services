@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow="— Contact us"
+        eyebrow="Contact us"
         crumb="Contact"
         title={
           <>

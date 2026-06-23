@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Button from "@/components/Button";
-import { ArrowIcon } from "@/components/icons";
 import { COMPANY, PRIMARY_CTA, SECONDARY_CTA } from "@/lib/content";
 
 /**
@@ -23,7 +22,6 @@ export default function Hero() {
         className="-z-10 object-cover"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-forest-950/85 via-forest-950/65 to-forest-950/90" />
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(120%_80%_at_15%_10%,rgba(123,158,54,0.18),transparent_55%)]" />
 
       <div className="mx-auto w-full max-w-site px-6 py-32 md:py-40">
         <div className="max-w-3xl">
@@ -44,7 +42,6 @@ export default function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button href={COMPANY.bookingUrl} variant="accent" size="lg">
               {PRIMARY_CTA}
-              <ArrowIcon className="h-5 w-5" />
             </Button>
             <Button href={COMPANY.introCallUrl} variant="ghost-light" size="lg">
               {SECONDARY_CTA}
@@ -57,8 +54,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* subtle bottom fade into the next section */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white/5" />
     </section>
   );
 }

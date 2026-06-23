@@ -56,7 +56,7 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         solid
-          ? "bg-white shadow-[0_4px_20px_rgba(37,53,44,0.10)]"
+          ? "border-b border-forest-900/10 bg-white"
           : "bg-transparent"
       }`}
     >

@@ -15,7 +15,7 @@ export default function Home() {
       <ServicesGrid />
 
       <CtaBand
-        eyebrow="— Ready for a greener lawn?"
+        eyebrow="Ready for a greener lawn?"
         title={
           <>
             Let&apos;s Get Your Yard <span className="text-leaf">Looking Sharp</span>
@@ -28,7 +28,7 @@ export default function Home() {
       <WhySpear />
 
       <CtaBand
-        eyebrow="— Ready to get started?"
+        eyebrow="Ready to get started?"
         title={
           <>
             Let&apos;s Make Your Lawn <span className="text-leaf">Look Great</span>

@@ -77,7 +77,7 @@ export default function BeforeAfterSlider({
         onPointerMove={handlePointerMove}
         onPointerUp={stopDragging}
         onPointerCancel={stopDragging}
-        className="relative aspect-[3/2] w-full select-none overflow-hidden rounded-card shadow-[0_14px_40px_rgba(37,53,44,0.20)] [touch-action:none] [cursor:ew-resize]"
+        className="relative aspect-[3/2] w-full select-none overflow-hidden rounded-card border border-forest-900/10 [touch-action:none] [cursor:ew-resize]"
       >
         {/* Base layer: AFTER */}
         <Image
@@ -124,7 +124,7 @@ export default function BeforeAfterSlider({
           aria-valuenow={Math.round(pos)}
           aria-valuetext={`${Math.round(pos)}% before`}
           onKeyDown={handleKeyDown}
-          className="absolute top-1/2 z-10 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full bg-leaf text-white shadow-[0_4px_14px_rgba(0,0,0,0.35)] ring-4 ring-white/70 transition-transform hover:scale-105 focus-visible:scale-105"
+          className="absolute top-1/2 z-10 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full bg-leaf text-white ring-2 ring-white transition-transform hover:scale-105 focus-visible:scale-105"
           style={{ left: `${pos}%` }}
         >
           <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round">

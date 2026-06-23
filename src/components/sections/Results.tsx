@@ -9,9 +9,9 @@ export default function Results() {
     <Section tone="mist">
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
-          <p className="eyebrow justify-center [&::before]:hidden">— Our results</p>
+          <p className="eyebrow justify-center [&::before]:hidden">Our results</p>
           <h2 className="mt-3 font-display text-[clamp(40px,6vw,72px)] leading-[1.0] text-forest-900">
-            See the <span className="text-leaf">Difference</span>
+            See the Difference
           </h2>
           <p className="mt-4 text-[16px] leading-relaxed text-muted">
             Drag the handle to reveal the transformation — overgrown to freshly

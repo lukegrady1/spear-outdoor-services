@@ -4,7 +4,7 @@ import { useState } from "react";
 import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import { COMPANY, SERVICES } from "@/lib/content";
-import { PhoneIcon, CheckIcon, ArrowIcon } from "@/components/icons";
+import { PhoneIcon, CheckIcon } from "@/components/icons";
 
 interface FormValues {
   firstName: string;
@@ -68,9 +68,9 @@ export default function Contact() {
       <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
         {/* Intro */}
         <Reveal>
-          <p className="eyebrow">— Get in touch</p>
+          <p className="eyebrow">Get in touch</p>
           <h2 className="mt-3 font-display text-[clamp(40px,6vw,68px)] leading-[1.0] text-forest-900">
-            Book a Free <span className="text-leaf">Estimate Now</span>
+            Book a Free Estimate Now
           </h2>
           <p className="mt-5 max-w-md text-[16px] leading-relaxed text-muted">
             Tell us about your property and what you&apos;re looking for. We&apos;ll
@@ -91,10 +91,9 @@ export default function Contact() {
               href={COMPANY.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-body text-[14px] font-semibold uppercase tracking-[0.12em] text-leaf link-wipe"
+              className="inline-flex font-body text-[14px] font-semibold uppercase tracking-[0.12em] text-leaf link-wipe"
             >
               Prefer to book online?
-              <ArrowIcon className="h-4 w-4" />
             </a>
           </div>
         </Reveal>
@@ -118,7 +117,7 @@ export default function Contact() {
             <form
               noValidate
               onSubmit={handleSubmit}
-              className="rounded-card border border-forest-900/10 bg-white p-7 shadow-[0_10px_30px_rgba(37,53,44,0.08)] sm:p-9"
+              className="rounded-card border border-forest-900/10 bg-white p-7 sm:p-9"
             >
               <div className="grid gap-5 sm:grid-cols-2">
                 <Field
@@ -193,10 +192,9 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-pill bg-leaf px-6 py-4 font-display text-[20px] tracking-[0.02em] text-white transition-[transform,background-color] duration-150 hover:-translate-y-0.5 hover:bg-leaf2 focus-visible:ring-2 focus-visible:ring-leaf focus-visible:ring-offset-2 motion-reduce:hover:translate-y-0"
+                className="mt-7 inline-flex w-full items-center justify-center rounded-pill bg-leaf px-6 py-4 font-display text-[20px] tracking-[0.02em] text-white transition-colors duration-150 hover:bg-leaf2 focus-visible:ring-2 focus-visible:ring-leaf focus-visible:ring-offset-2"
               >
                 Book a Free Estimate
-                <ArrowIcon className="h-5 w-5" />
               </button>
 
               <p className="mt-4 text-center text-[12px] text-muted">

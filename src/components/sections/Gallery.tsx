@@ -41,9 +41,9 @@ export default function Gallery() {
     <Section id="gallery" tone="white">
       <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
         <Reveal>
-          <p className="eyebrow">— Our latest work</p>
+          <p className="eyebrow">Our latest work</p>
           <h2 className="mt-3 font-display text-[clamp(40px,6vw,72px)] leading-[1.0] text-forest-900">
-            Recently Around <span className="text-leaf">the Neighborhood</span>
+            Recently Around the Neighborhood
           </h2>
         </Reveal>
         <Reveal delay={120}>
