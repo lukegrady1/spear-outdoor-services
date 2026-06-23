@@ -62,7 +62,7 @@ export default function Header() {
     >
       {/* relative z-50 keeps the bar (logo + X) above the z-40 overlay */}
       <div className="relative z-50 mx-auto flex h-[var(--h)] max-w-site items-center justify-between px-6 [--h:88px] md:[--h:112px]">
-        <Logo tone={solid ? "dark" : "light"} size="md" />
+        <Logo tone={solid ? "dark" : "light"} size="md" onClick={() => setOpen(false)} />
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 lg:flex">

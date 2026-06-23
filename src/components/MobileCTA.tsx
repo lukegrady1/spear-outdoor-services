@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { COMPANY } from "@/lib/content";
 
 /**
@@ -11,6 +12,9 @@ import { COMPANY } from "@/lib/content";
  */
 export default function MobileCTA() {
   const [visible, setVisible] = useState(false);
+  // Re-evaluate on route change — this component lives in the layout and
+  // persists across client-side navigations, so the effect must re-run.
+  const pathname = usePathname();
 
   useEffect(() => {
     const hero = document.getElementById("top");
@@ -18,14 +22,15 @@ export default function MobileCTA() {
       setVisible(true);
       return;
     }
-    // Reveal once the hero has fully scrolled out of the viewport.
+    // Hide while the hero is in view; reveal once it has fully scrolled away.
+    setVisible(false);
     const observer = new IntersectionObserver(
       ([entry]) => setVisible(!entry.isIntersecting),
       { threshold: 0 },
     );
     observer.observe(hero);
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return (
     <a

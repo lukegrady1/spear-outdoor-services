@@ -11,6 +11,8 @@ export interface LogoProps {
   /** Rendered height utility (Tailwind), width scales automatically. */
   size?: "sm" | "md" | "lg";
   className?: string;
+  /** Fired on click — e.g. to close the mobile menu when navigating home. */
+  onClick?: () => void;
 }
 
 const sizes: Record<NonNullable<LogoProps["size"]>, string> = {
@@ -23,12 +25,18 @@ const sizes: Record<NonNullable<LogoProps["size"]>, string> = {
  * Spear Outdoor Services emblem (public/images/logo.webp). The logo art already
  * contains the wordmark, so no separate text is rendered.
  */
-export default function Logo({ tone = "dark", size = "md", className = "" }: LogoProps) {
+export default function Logo({
+  tone = "dark",
+  size = "md",
+  className = "",
+  onClick,
+}: LogoProps) {
   const onDark = tone === "light";
 
   return (
     <Link
       href="/"
+      onClick={onClick}
       aria-label="Spear Outdoor Services — home"
       className={`inline-flex items-center transition-transform duration-200 hover:-translate-y-0.5 ${className}`}
     >
