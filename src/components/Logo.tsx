@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export interface LogoProps {
   /**
@@ -32,11 +35,21 @@ export default function Logo({
   onClick,
 }: LogoProps) {
   const onDark = tone === "light";
+  const pathname = usePathname();
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    onClick?.();
+    // Already on the home page: navigating to "/" is a no-op, so scroll to top.
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   return (
     <Link
       href="/"
-      onClick={onClick}
+      onClick={handleClick}
       aria-label="Spear Outdoor Services — home"
       className={`inline-flex items-center transition-transform duration-200 hover:-translate-y-0.5 ${className}`}
     >
