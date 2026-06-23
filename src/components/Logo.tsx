@@ -20,7 +20,7 @@ const sizes: Record<NonNullable<LogoProps["size"]>, string> = {
 };
 
 /**
- * Spear Outdoor Services emblem (public/images/logo.png). The logo art already
+ * Spear Outdoor Services emblem (public/images/logo.webp). The logo art already
  * contains the wordmark, so no separate text is rendered.
  */
 export default function Logo({ tone = "dark", size = "md", className = "" }: LogoProps) {
@@ -38,7 +38,7 @@ export default function Logo({ tone = "dark", size = "md", className = "" }: Log
         }`}
       >
         <Image
-          src="/images/logo.png"
+          src="/images/logo.webp"
           alt="Spear Outdoor Services logo"
           width={300}
           height={201}

@@ -13,9 +13,9 @@ export default function Hero() {
       className="relative isolate flex min-h-[88vh] items-center overflow-hidden bg-forest-950 text-white"
     >
       {/* Background photo + forest overlay so white text always pops.
-          Swap the file at public/images/hero.jpg to change this. */}
+          Swap the file at public/images/hero.webp to change this. */}
       <Image
-        src="/images/hero.jpg"
+        src="/images/hero.webp"
         alt="Healthy green lawn maintained by Spear Outdoor Services"
         fill
         priority
