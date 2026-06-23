@@ -25,6 +25,14 @@ export interface Company {
   readonly emailPlaceholder: string;
 }
 
+/**
+ * Canonical site URL — used for metadata, sitemap, robots, and JSON-LD.
+ * NOTE: set to the real business domain. If the site lives permanently at the
+ * GitHub Pages URL instead, change this to
+ * "https://lukegrady1.github.io/spear-outdoor-services".
+ */
+export const SITE_URL = "https://www.spearoutdoorservices.com";
+
 export const COMPANY: Company = {
   name: "Spear Outdoor Services",
   owner: "Alan Spear",

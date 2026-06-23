@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCTA from "@/components/MobileCTA";
+import StructuredData from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/content";
 
 const bebas = Bebas_Neue({
   weight: "400",
@@ -20,9 +22,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.spearoutdoorservices.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Spear Outdoor Services — Reliable Lawn Care & Landscaping in Upton, MA",
+    default: "Lawn Care & Landscaping in Upton, MA | Spear Outdoor Services",
     template: "%s · Spear Outdoor Services",
   },
   description:
@@ -55,6 +57,7 @@ export default function RootLayout({
       className={`${bebas.variable} ${poppins.variable} scroll-smooth`}
     >
       <body className="flex min-h-screen flex-col overflow-x-hidden">
+        <StructuredData />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

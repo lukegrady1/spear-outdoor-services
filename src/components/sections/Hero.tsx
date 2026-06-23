@@ -27,11 +27,12 @@ export default function Hero() {
       <div className="mx-auto w-full max-w-site px-6 py-32 md:py-40">
         <div className="max-w-3xl">
           <p className="eyebrow text-leaf [&::before]:bg-leaf">
-            Lawn Care &amp; Landscaping · {COMPANY.location}
+            Honest Work · Fair Pricing
           </p>
 
           <h1 className="mt-5 font-display text-[clamp(48px,7.5vw,76px)] leading-[1.02] tracking-[0.01em] text-white">
-            Reliable Lawn Care, <span className="text-leaf">Done Right</span>
+            Lawn Care &amp; Landscaping in{" "}
+            <span className="text-leaf">{COMPANY.location}</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-[clamp(16px,2vw,19px)] leading-relaxed text-white/85">
