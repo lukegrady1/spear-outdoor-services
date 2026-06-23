@@ -12,10 +12,11 @@ export default function Hero() {
       id="top"
       className="relative isolate flex min-h-[88vh] items-center overflow-hidden bg-forest-950 text-white"
     >
-      {/* Background photo + forest overlays so white text always pops */}
+      {/* Background photo + forest overlay so white text always pops.
+          Swap the file at public/images/hero.jpg to change this. */}
       <Image
-        src="/images/hero-lawn.svg"
-        alt="Freshly mowed, healthy green lawn at golden hour"
+        src="/images/hero.jpg"
+        alt="Healthy green lawn maintained by Spear Outdoor Services"
         fill
         priority
         sizes="100vw"
